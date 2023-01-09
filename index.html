@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.com/libraries/Chart.js"><link rel="icon" href="img/logo.png">
+    <title>Report December </title>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav-ul" id="nav"> 
+        <li class="nav-li"> <a href="#questions">Частые вопросов </a></li>
+        <li class="nav-li"> <a href="#feature">Запросы функций</a></li>
+        <li class="nav-li"> <a href="#OS">Клавификация ОС</a></li>
+      </ul>
+    </nav>
+    <div class="container questions">
+      <div class="tab-content_cnt--label">
+        <h2 class="tab-content_cnt--label" id="questions">Частые вопросы за декабрь</h2>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">LDAP/SSO</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Как настроить LDAP</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Приводим примеры различных настроек</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Как настроить SSO</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Отправляем инструкции для различных провайдеров SSO</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>3.</code> Неверный логин или пароль пользователя LDAP</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Обычно не загружены пользователи LDAP</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>4.</code> Пользователи были деактивированы после включения LDAP</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Была настроена автоматическая деактивация пользователей, не входящих в группы LDAP</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">Сессия</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Страница авторизации обновляется после ввода логина и пароля</div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">Решает проблему смена параметров в файлах config и php</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Сессия этой вкладки устарела</div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">В большинстве случаев помогает изменение значения PHPSESSID, либо указан протокол HTTP при перенаправлении на HTTPS</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">Установка</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Сборка Phalcon </div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">Пользователи считают, что сборка зависла, и закрывают процесс</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Не активируются фоновые задачи </div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">После добавления [session] в confgi.ini или добавления php8.0-curl и расширений в /conf.d запуск успешен</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>3.</code> Как обновить Пассворк </div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">Предоставляем ссылку на список инструкций для различных ОС. В случае, если Пассворк ниже версии 4, предупреждаем, что требуется пошаговый процесс обновления 3 → 4 → 5</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">База данных</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Как создавать резервную копию, выполнять миграцию</div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">Предоставляем инструкции по работе с утилитами MongoDB и описываем процесс миграции</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Как шифруется база данных, как работает клиентское шифрование</div><span class="tab-content--line">— </span>
+          <div class="tab-content_text">Даем описание шифрования или клиентского шифрования</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">SMTP/Postfix</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Как настроить отправку уведомлений  </div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Отправляем инструкции по настройке SMTP или Postifx</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Различные ошибки SMTP/Postfix   </div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">В большинстве случаев отсутствует e-mail "noreplyEmail" или неправильно настроен мэйлер</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">Мобильное приложение</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Не удается редактировать пароли через приложение</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Актуально для ОС WindowsServer. Необходимо добавить «PUT» и «DELETE», в PHP handler</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Не удается авторизовать мобильное приложение. </div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">В некоторых случаях на мобильных устройствах отсутствует промежуточный сертификат</div>
+        </div>
+      </div>
+      <button class="tab-open"><span class="tab-open--figure">API</span></button>
+      <div class="tab-content">
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>1.</code> Как работает API</div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Указываем, что документация находится в разделе настроек API, и рекомендуем использовать JSconnector</div>
+        </div>
+        <div class="tab-content_cnt">
+          <div class="tab-content_title"><code>2.</code> Ошибка “accountNotAuth” </div><span class="tab-content--line">—</span>
+          <div class="tab-content_text">Необходимо скопировать и добавить токен</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="tab-content_cnt--label" id="feature">Запросы функций за декабрь</h2>
+      <div class="table">
+        <div class="table_inner">
+          <button class="tab-open"><span class="tab-open--figure">Пароли</span></button>
+          <div class="tab-content">
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Корзина <code>*5</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Политика паролей <code>*3</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Шаблоны с предопределенными полями <code>*2</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Добавление нескольких URL-адресов <code>*2</code></div>
+            </div>
+          </div>
+          <button class="tab-open"><span class="tab-open--figure">Расширение</span></button>
+          <div class="tab-content">
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Добавление поддержки нестандартных форм авторизации <code>*5</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Возможность вставить доп.поле URL, для заполнения расширением <code>*2</code></div>
+            </div>
+          </div>
+          <button class="tab-open"><span class="tab-open--figure">Поиск</span></button>
+          <div class="tab-content">
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Wildcard поиск <code>*4</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Поиск папок в приложении Пассворк <code>*2</code></div>
+            </div>
+          </div>
+          <button class="tab-open"><span class="tab-open--figure">Сессия</span></button>
+          <div class="tab-content">
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Устанавливать любое время выхода из системы при неактивности <code>*2</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Возможность использования 2FA Пассворк при включенном SSO <code>*2</code></div>
+            </div>
+          </div>
+          <button class="tab-open"><span class="tab-open--figure">Интерфейс</span></button>
+          <div class="tab-content">
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Установка логотипа компании <code>*2</code></div>
+            </div>
+            <div class="tab-content_cnt"><span class="tab-content--line">—</span>
+              <div class="tab-content_text">Отображение пути к паролю в Инбоксе  <code>*2</code></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tab-content_cnt--label">
+        <h2 class="tab-content_cnt--label" id="OS">Обращения с ОС в декабре</h2>
+      </div>
+      <div class="os_cnt">
+        <div class="circle-os"> 
+          <div class="circle-os_line"> 
+            <div class="circle-os_line--front">  </div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Ubuntu"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Debian"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--CentOS"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--RHEL"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Astra"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Windows"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Docker"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Cloud"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Unknow"></div>
+            <div class="circle-os_line--load circle-os_line--load_OS--Unknow--01"></div>
+          </div>
+        </div>
+        <div class="description-os">
+          <div class="description-os_name">
+            <div class="description-os_cnt"><span class="description-os--Ubuntu"></span>
+              <p class="description-os_text">Ubuntu — <span class="description-os_count">21</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Debian"></span>
+              <p class="description-os_text">Debian — <span class="description-os_count">15</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--CentOS"></span>
+              <p class="description-os_text">CentOS — <span class="description-os_count">13</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--RHEL"></span>
+              <p class="description-os_text">RHEL — <span class="description-os_count">02</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Astra"></span>
+              <p class="description-os_text">Astra — <span class="description-os_count">07</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Windows"></span>
+              <p class="description-os_text">Windows — <span class="description-os_count">24</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Docker"></span>
+              <p class="description-os_text">Docker — <span class="description-os_count">14</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Cloud"></span>
+              <p class="description-os_text">Cloud — <span class="description-os_count">43</span></p>
+            </div>
+            <div class="description-os_cnt"><span class="description-os--Unknown"></span>
+              <p class="description-os_text">Неопределённо — <span class="description-os_count">77</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/console.js"></script>
+  </body>
+</html>
